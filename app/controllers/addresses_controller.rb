@@ -1,22 +1,22 @@
-# class AddressesController < ApplicationController
-#   def index
-#     address = Address.all
-#     render json: address.to_json, status: 200
-#   end
+class AddressesController < ApplicationController
+  def index
+    address = Address.all
+    render json: address.to_json, status: 200
+  end
 
-#   def new
-#     address = Address.new
-#     render json: address.to_json, status: 200
-#   end
+  def new
+    address = Address.new
+    render json: address.to_json, status: 200
+  end
 
-#   def show
-#     if Address.exists?(params[:id])
-#       address = Address.find(params[:id])
-#       render json: address.to_json, status: 200
-#     else
-#       render json: { error_msg: 'Address Not Found!', id: params[:id] }.to_json, status: 404
-#     end
-#   end
+  def show
+    if Address.exists?(params[:id])
+      address = Address.find(params[:id])
+      render json: address.to_json, status: 200
+    else
+      render json: { error_msg: 'Address Not Found!', id: params[:id] }.to_json, status: 404
+    end
+  end
 
 
   def create
