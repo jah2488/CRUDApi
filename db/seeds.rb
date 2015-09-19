@@ -19,32 +19,31 @@
 #     })
 #   end
 # end
-
 20.times do
-   user = User.create({
-     first_name:  Faker::Name.first_name,
-     last_name:   Faker::Name.last_name,
-     age:         Faker::Number.between(18, 99),
-   })
-   Address.create({
-      user_id:     user.id,
-      street_name: Faker::Address.street_address,
-      city:        Faker::Address.city,
-      state:       Faker::Address.state,
-      zip:         Faker::Address.zip,
-    })
-  end
-
-
-  40.times do
-    item = Item.create({
-      name:            Faker::Commerce.product_name,
-      price:           Faker::Number.between(1, 25),
-      description:     Faker::Commerce.department,
-      })
-    Order.create({
-      user_id:   Faker::Number.between(1,30),
-      item_id:   item.id,
-      quantity:       Faker::Number.between(1,10),
+  user = User.create({
+    first_name:  Faker::Name.first_name,
+    last_name:   Faker::Name.last_name,
+    age:         Faker::Number.between(18, 99),
   })
-  end
+  Address.create({
+    user_id:     user.id,
+    street_name: Faker::Address.street_address,
+    city:        Faker::Address.city,
+    state:       Faker::Address.state,
+    zip:         Faker::Address.zip,
+  })
+end
+
+
+40.times do
+  item = Item.create({
+    name:            Faker::Commerce.product_name,
+    price:           Faker::Number.between(1, 25),
+    description:     Faker::Commerce.department,
+  })
+  Order.create({
+    user_id:   Faker::Number.between(1,20),
+    item_id:   item.id,
+    quantity:  Faker::Number.between(1,10),
+  })
+end
