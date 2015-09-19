@@ -26,9 +26,9 @@ class ItemsController < ApplicationController
 
   def create
     item = Item.new
-    item.name    = params[:name]
-    item.price   = params[:price]
-    item.desc    = params[:desc]
+    item.name          = params[:name]
+    item.price         = params[:price]
+    item.description   = params[:description]
     item.save!
     render json: item, status: 200
   end
@@ -36,7 +36,7 @@ class ItemsController < ApplicationController
   def update
     if Item.exists?(params[:id])
       item        = Item.find(params[:id])
-      item.desc   = params.fetch(:desc, item.desc)
+      item.desc   = params.fetch(:description, item.description)
       item.name   = params.fetch(:name, item.name)
       item.price  = params.fetch(:price, item.price)
       item.save

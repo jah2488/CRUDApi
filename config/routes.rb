@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   put     '/items/:id',  to: 'items#update'
   delete  '/items/:id',  to: 'items#destroy'
 
-  get     '/items/:id/users', to: 'items#users'  #join tables
+  get     '/items/:id/users', to: 'items#users'
 
   get     '/orders',      to: 'orders#index'
   get     '/orders/new',  to: 'orders#new'
@@ -25,7 +25,7 @@ Rails.application.routes.draw do
   put     '/users/:id',   to: 'users#update'
   delete  '/users/:id',   to: 'users#destroy'
 
-  get     '/users/:id/items', to: 'users#items'  #join tables
+  get     '/users/:id/items', to: 'users#items'
 
   root    'users#index'
 end

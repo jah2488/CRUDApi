@@ -22,15 +22,15 @@ class OrdersController < ApplicationController
       order = Order.new
       order.item_id = params[:item_id]
       order.user_id = params[:user_id]
-      order.qty     = params[:qty]
+      order.quantity  = params[:quantity]
       order.save!
       render json: order
   end
 
   def update
     if Order.exists?(params[:id])
-      order       = Order.find(params[:id])
-      order.qty   = params[:qty]
+      order          = Order.find(params[:id])
+      order.quantity = params[:quantity]
       order.save
       render json: order, status: 200
     else
