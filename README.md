@@ -6,11 +6,11 @@ Run `bundle install`
 ### Configuration
 `gem install faker` and add it to `group: development` in Gemfile
 
-          `group :development do
+          group :development do
               gem 'web-console', '~> 2.0'
               gem 'spring'
               gem 'faker'
-          end`
+          end
 
 ###Database creation
 Postgres
