@@ -1,13 +1,14 @@
 ### About CRUD_API
-
+This four table API tracks Users, their Addresses, Items, and Orders and can search across joined tables
 
 ### System dependencies
-
+Run :bundle install
 ### Configuration
-
+Install Faker gem and add it to "group: development" in Gemfile
 ###Database creation
-
+Postgres
 #### Table "addresses"
+    PRIMARY KEY = ID (auto generated)
     "user_id", integer, null: false
     "street_name", string, null: false
     "city", string, null: false
@@ -17,7 +18,7 @@
 ###### To see all users: http://localhost:3000/users
 
 #### Table: "items"
-      PRIMARY KEY = ID
+      PRIMARY KEY = ID (auto generated)
       "name", string, null: false
       "description", string, null: false
       "price", float, null: false
@@ -26,7 +27,7 @@
 
 
 #### Table "orders"
-    PRIMARY KEY = ID
+    PRIMARY KEY = ID (auto generated)
     "item_id", integer, null: false
     "user_id", integer, null: false
     "quantity", integer, null: false
@@ -35,7 +36,7 @@
 
 
 #### Table "users"
-    PRIMARY KEY = ID
+    PRIMARY KEY = ID (auto generated)
     "first_name", string, null: false
     "last_name", string, null: false
     "age", string, null: false
