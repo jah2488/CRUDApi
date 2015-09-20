@@ -1,43 +1,43 @@
-* ReadMe
+# ReadMe
 
 
-* System dependencies
+## System dependencies
 
-* Configuration
+## Configuration
 
-* Database creation
+##Database creation
 
-** Table "addresses"
+## Table "addresses"
     "user_id", integer, null: false
     "street_name", string, null: false
     "city", string, null: false
     "state", string, null: false
     "zip", string, null: false
 
-To see all users: http://localhost:3000/users
+####To see all users: http://localhost:3000/users
 
-** Table: "items"
+## Table: "items"
       "name", string, null: false
       "description", string, null: false
       "price", float, null: false
 
-To see all items: http://localhost:3000/items
+####To see all items: http://localhost:3000/items
 
 
-** Table "orders"
+## Table "orders"
     "item_id", integer, null: false
     "user_id", integer, null: false
     "quantity", integer, null: false
 
-**** To see all orders: http://localhost:3000/orders
+#### To see all orders: http://localhost:3000/orders
 
 
-** Table "users"
+## Table "users"
     "first_name", string, null: false
     "last_name", string, null: false
     "age", string, null: false
 
-To see all users: http://localhost:3000/users
+#### To see all users: http://localhost:3000/users
 
 
 * Database initialization
