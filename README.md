@@ -17,6 +17,7 @@
 ###### To see all users: http://localhost:3000/users
 
 #### Table: "items"
+      PRIMARY KEY = ID
       "name", string, null: false
       "description", string, null: false
       "price", float, null: false
@@ -25,6 +26,7 @@
 
 
 #### Table "orders"
+    PRIMARY KEY = ID
     "item_id", integer, null: false
     "user_id", integer, null: false
     "quantity", integer, null: false
@@ -33,6 +35,7 @@
 
 
 #### Table "users"
+    PRIMARY KEY = ID
     "first_name", string, null: false
     "last_name", string, null: false
     "age", string, null: false
@@ -40,16 +43,10 @@
 ###### To see all users: http://localhost:3000/users
 
 
-
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-###### **How to get all items purchased by a particular User:**
+##### How to get all items purchased by a particular User:
   http://localhost:3000/users/2/items/
 
-###### **How to get all Users who purchased a particular Item:**
+##### How to get all Users who purchased a particular Item:
 http://localhost:3000/items/10/users/
+
+###### NOTE: All messages from the system are via render json:
