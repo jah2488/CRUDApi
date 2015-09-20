@@ -31,7 +31,7 @@ class OrdersController < ApplicationController
     if Order.exists?(params[:id])
       order          = Order.find(params[:id])
       order.quantity = params[:quantity]
-      order.save
+      order.save!
       render json: order, status: 200
     else
       render json: { error_msg: 'Order Not Found!', id: params[:id] }.to_json, status: 404
