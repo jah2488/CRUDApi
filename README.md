@@ -16,7 +16,7 @@
 
 ###### To see all users: http://localhost:3000/users
 
-#### Table: "items"
+###### Table: "items"
       "name", string, null: false
       "description", string, null: false
       "price", float, null: false
@@ -24,7 +24,7 @@
 ####To see all items: http://localhost:3000/items
 
 
-#### Table "orders"
+###### Table "orders"
     "item_id", integer, null: false
     "user_id", integer, null: false
     "quantity", integer, null: false
@@ -40,7 +40,7 @@
 ###### To see all users: http://localhost:3000/users
 
 
-* Database initialization
+
 
 * How to run the test suite
 
@@ -50,8 +50,8 @@
 
 * ...
 
-** How to get all items purchased by a particular User:
+###### How to get all items purchased by a particular User:
   http://localhost:3000/users/2/items/
 
-** How to get all Users who purchased a particulat item:
+###### How to get all Users who purchased a particulat item:
   http://localhost:3000/users/2/items/
