@@ -57,4 +57,4 @@ Postgres
 ##### How to get all Users who purchased a particular Item:
 http://localhost:3000/items/10/users/
 
-###### NOTE: All messages from the system are via render json:
+**NOTE: All messages from the system are via** `render json:`
