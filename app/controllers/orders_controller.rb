@@ -23,7 +23,7 @@ class OrdersController < ApplicationController
       order.item_id = params[:item_id]
       order.user_id = params[:user_id]
       order.quantity  = params[:quantity]
-      order.save
+      order.save!
       render json: order
   end
 
