@@ -7,23 +7,28 @@ This README contains the steps are necessary to get the application up and runni
 * Configuration
 
 * Database creation
+
+** Table "addresses"
+    "user_id", integer, null: false
+    "street_name", string, null: false
+    "city", string, null: false
+    "state", string, null: false
+    "zip", string, null: false
+
 ** Table: "items"
       "name", string, null: false
       "description", string, null: false
       "price", float, null: false
 
-**** USE:
+** Table "orders"
+    "item_id", integer, null: false
+    "user_id", integer, null: false
+    "quantity", integer, null: false
 
-  create_table "orders", force: :cascade do |t|
-    t.integer "item_id",  null: false
-    t.integer "user_id",  null: false
-    t.integer "quantity", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string  "first_name", null: false
-    t.string  "last_name",  null: false
-    t.integer "age",        null: false
+** Table "users"
+    "first_name", string, null: false
+    "last_name", string, null: false
+    "age", string, null: false
 
 * Database initialization
 
@@ -35,3 +40,8 @@ This README contains the steps are necessary to get the application up and runni
 
 * ...
 
+** How to get all items purchased by a particular User:
+  http://localhost:3000/users/2/items/
+
+** How to get all Users who purchased a particulat item:
+  http://localhost:3000/users/2/items/
