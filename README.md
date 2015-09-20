@@ -1,5 +1,7 @@
 ### About CRUD_API
-This four table API tracks Users, their Addresses, Items, and Orders and can search across joined tables.
+This four-table API tracks Users, their Addresses, Items, and Orders and can search across joined tables.
+
+From the project's root directory, start `rails s` and paste any of the following URLs to the browser.
 
 ### System dependencies
 Run `bundle install`
