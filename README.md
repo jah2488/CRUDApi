@@ -1,10 +1,17 @@
 ### About CRUD_API
-This four table API tracks Users, their Addresses, Items, and Orders and can search across joined tables
+This four table API tracks Users, their Addresses, Items, and Orders and can search across joined tables.
 
 ### System dependencies
 Run `bundle install`
 ### Configuration
-Install Faker gem and add it to `group: development` in Gemfile
+`gem install faker` and add it to `group: development` in Gemfile
+
+          `group :development do
+              gem 'web-console', '~> 2.0'
+              gem 'spring'
+              gem 'faker'
+          end`
+
 ###Database creation
 Postgres
 #### Table "addresses"
