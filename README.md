@@ -2,9 +2,9 @@
 This four table API tracks Users, their Addresses, Items, and Orders and can search across joined tables
 
 ### System dependencies
-Run :bundle install
+Run `bundle install`
 ### Configuration
-Install Faker gem and add it to "group: development" in Gemfile
+Install Faker gem and add it to `group: development` in Gemfile
 ###Database creation
 Postgres
 #### Table "addresses"
