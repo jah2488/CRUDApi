@@ -50,8 +50,8 @@ class ItemsController < ApplicationController
     if Item.exists?(params[:id])
       item          = Item.find(params[:id])
       item.destroy
-      message       = "Item was deleted."
-      render json: message, status: 200
+      message      = "Item was deleted."
+      render json: message.to_json, status: 200
     else
       render json: { error_msg: 'Item Not Found!', id: params[:id] }.to_json, status: 404
     end
