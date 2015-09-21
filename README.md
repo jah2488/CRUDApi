@@ -46,8 +46,14 @@ Postgres
     "last_name", string, null: false
     "age", string, null: false
 
-##### To get all items purchased by a particular User, send a `get` request to: http://localhost:3000/users/2/items/
+##### To get all items purchased by a particular User, send a `get` request to:
+http://localhost:3000/users/2/items/
 
+The responde will be in JSON format with the following parameters:
+
+    "name", string, null: false
+    "description", string, null: false
+    "price", float, null: false
 
 ##### To get all Users who purchased a particular Item, send a `get` request to:
 http://localhost:3000/items/10/users/
