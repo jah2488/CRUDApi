@@ -17,6 +17,7 @@ Run `bundle install`
 ###Database creation
 Postgres
 #### Table "addresses"
+###### To see all addresses, send a `get` request to http://localhost:3000/addresses. The response will be in JSON format with the following parameters
     PRIMARY KEY = ID (auto generated)
     "user_id", integer, null: false
     "street_name", string, null: false
@@ -24,37 +25,29 @@ Postgres
     "state", string, null: false
     "zip", string, null: false
 
-###### To see all users, send a `get` request to http://localhost:3000/users
-
 #### Table: "items"
+###### To see all addresses, send a `get` request to http://localhost:3000/items. The response will be in JSON format with the following parameters
       PRIMARY KEY = ID (auto generated)
       "name", string, null: false
       "description", string, null: false
       "price", float, null: false
 
-######To see all items, send a `get` request to http://localhost:3000/items
-
-
 #### Table "orders"
+###### To see all addresses, send a `get` request to http://localhost:3000/orders. The response will be in JSON format with the following parameters
     PRIMARY KEY = ID (auto generated)
     "item_id", integer, null: false
     "user_id", integer, null: false
     "quantity", integer, null: false
 
-###### To see all orders, send a `get` request to http://localhost:3000/orders
-
-
 #### Table "users"
+###### To see all addresses, send a `get` request to http://localhost:3000/users. The response will be in JSON format with the following parameters
     PRIMARY KEY = ID (auto generated)
     "first_name", string, null: false
     "last_name", string, null: false
     "age", string, null: false
 
-###### To see all users, send a `get` request to http://localhost:3000/users
+##### To get all items purchased by a particular User, send a `get` request to: http://localhost:3000/users/2/items/
 
-
-##### To get all items purchased by a particular User, send a `get` request to:
-  http://localhost:3000/users/2/items/
 
 ##### To get all Users who purchased a particular Item, send a `get` request to:
 http://localhost:3000/items/10/users/
