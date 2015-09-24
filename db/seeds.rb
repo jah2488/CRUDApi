@@ -20,6 +20,11 @@
 #   end
 # end
 require File.expand_path('../../config/environment',  __FILE__)
+Dir.foreach(Rails.root.join('app', 'models')) do |model_path|
+  puts model_path
+  require model_path if model_path.include?('.rb')
+end
+puts ActiveRecord::Base.descendants.inspect
 
 20.times do
   user_class = Object.const_get("User")
