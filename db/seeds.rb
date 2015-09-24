@@ -20,6 +20,13 @@
 #   end
 # end
 20.times do
+  user_class = Object.const_get("User")
+  user_class.create({
+    first_name:  Faker::Name.first_name,
+    last_name:   Faker::Name.last_name,
+    age:         Faker::Number.between(18, 99),
+  })
+
   user = User.create({
     first_name:  Faker::Name.first_name,
     last_name:   Faker::Name.last_name,
