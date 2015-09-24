@@ -19,6 +19,8 @@
 #     })
 #   end
 # end
+require File.expand_path('../config/environment',  __FILE__)
+
 20.times do
   user_class = Object.const_get("User")
   user_class.create({
