@@ -27,5 +27,5 @@ Rails.application.routes.draw do
 
   get     '/users/:id/items', to: 'users#items'
 
-  root    'users#index'
+  match '*something', to: 'application#options', via: [:options]
 end
